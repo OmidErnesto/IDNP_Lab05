@@ -1,7 +1,9 @@
 package com.example.lab02;
 
-public class Postulante {
-    private String apellidoPaterno;
+import java.io.Serializable;
+
+public class Postulante implements Serializable {
+    private String dni;
     private String apellidoMaterno;
     private String nombres;
     private String fechaNacimiento;
@@ -9,8 +11,8 @@ public class Postulante {
     private String carrera;
 
     // Constructor
-    public Postulante(String apellidoPaterno, String apellidoMaterno, String nombres, String fechaNacimiento, String colegio, String carrera) {
-        this.apellidoPaterno = apellidoPaterno;
+    public Postulante(String dni, String apellidoMaterno, String nombres, String fechaNacimiento, String colegio, String carrera) {
+        this.dni = dni;
         this.apellidoMaterno = apellidoMaterno;
         this.nombres = nombres;
         this.fechaNacimiento = fechaNacimiento;
@@ -19,8 +21,8 @@ public class Postulante {
     }
 
     // Getters
-    public String getApellidoPaterno() {
-        return apellidoPaterno;
+    public String getDni() {
+        return dni;
     }
 
     public String getApellidoMaterno() {
